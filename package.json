@@ -1,0 +1,25 @@
+{
+  "name": "macbook",
+  "version": "1.0.0",
+  "description": "macbook clone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevenanderson37/personalProj.git"
+  },
+  "author": "Steven Anderson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stevenanderson37/personalProj/issues"
+  },
+  "homepage": "https://github.com/stevenanderson37/personalProj#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "massive": "^2.5.0"
+  }
+}
