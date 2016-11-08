@@ -1,9 +1,9 @@
-angular.module('appleApp')
+angular.module("app")
 .directive('navBarDirective', function() {
 
   return {
     restrict: 'AE',
-    templateUrl: '../views/navBarDirective.html'
+    templateUrl: '../app/views/navBarDirective.html'
     }
 
 

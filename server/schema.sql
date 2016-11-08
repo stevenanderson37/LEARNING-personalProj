@@ -1,3 +1,15 @@
+CREATE TABLE macbook
+(
+  id SERIAL PRIMARY KEY,
+  productid INTEGER,
+  finishid INTEGER,
+  storageid INTEGER,
+  processorid INTEGER,
+  keyboardid INTEGER,
+  applecareid INTEGER,
+  price DECIMAL
+);
+
 CREATE TABLE products
 (
   id SERIAL PRIMARY KEY,
@@ -52,13 +64,7 @@ CREATE TABLE accessories
   price DECIMAL
 );
 
-CREATE TABLE order
-(
-  id SERIAL PRIMARY KEY,
-  subtotal DECIMAL
-);
-
-CREATE TABLE guests
+CREATE TABLE user
 (
   id SERIAL PRIMARY KEY,
   first_name VARCHAR(100),
@@ -93,17 +99,11 @@ CREATE TABLE billing_info
   zip VARCHAR(100)
 );
 
-CREATE TABLE macbooks
+CREATE TABLE bag
 (
   id SERIAL PRIMARY KEY,
-  name VARCHAR(100),
-  processor VARCHAR(100),
-  sdram VARCHAR(100),
-  storage VARCHAR(100),
-  graphics VARCHAR(100),
-  keyboard VARCHAR(100),
-  accessory_kit VARCHAR(100),
-  price INTEGER
+  total DECIMAL,
+  complete BOOLEAN
 );
 
 -- products
@@ -301,6 +301,19 @@ INSERT INTO accessories
 VALUES ('Microsoft Office 365 Home (1-year Subscription; 5 Licenses)',	'Office gives you a suite of powerful productivity apps, including Word, Excel, PowerPoint, and OneNote. Choose the version that’s right for you. Office 365 is a convenient annual subscription delivering exclusive monthly upgrades and new features on your Mac, iPad, and iPhone—so you can get things done from virtually anywhere. Office Home & Student 2016 is a one-time purchase that’s ideal for use on a single Mac.', 'http://store.storeimages.cdn-apple.com/4973/as-images.apple.com/is/image/AppleInc/aos/published/images/c/to/cto/office365/cto-office365-2015?wid=408&hei=408&align=0,-1&fmt=png-alpha&qlt=95&.v=1465325610380',	99.95);
 
 -- macbooks
+
+CREATE TABLE macbooks
+(
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100),
+  processor VARCHAR(100),
+  sdram VARCHAR(100),
+  storage VARCHAR(100),
+  graphics VARCHAR(100),
+  keyboard VARCHAR(100),
+  accessory_kit VARCHAR(100),
+  price INTEGER
+);
 
 INSERT INTO macbooks
 (name, processor, sdram, storage, graphics, keyboard, accessory_kit, price)

@@ -1,4 +1,4 @@
-angular.module('appleApp')
+angular.module("app")
 .directive('footerDirective', function() {
 
   return {
